@@ -9,7 +9,15 @@ public class InputValidationUtils
      */
     public static boolean isDouble(String string)
     {
-        return false;
+        try
+        {
+            Double.parseDouble(string);
+            return true;
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
     }
 
     /**
@@ -19,7 +27,15 @@ public class InputValidationUtils
      */
     public static boolean isPositiveInteger(String string)
     {
-        return false;
+        try
+        {
+            Integer num = Integer.parseInt(string);
+            return num > 0;
+        }
+        catch (NumberFormatException e)
+        {
+            return false;
+        }
     }
 
     /**
@@ -29,7 +45,12 @@ public class InputValidationUtils
      */
     public static boolean isAcceptableNumberOfArguments(String[] args)
     {
-        return false;
+        if (args.length < 4 || args.length > 5)
+        {
+            return false;
+        }
+
+        return true;
     }
 
     // does this method need unit tests?
@@ -40,6 +61,36 @@ public class InputValidationUtils
      */
     public static boolean isInputValid(String args[])
     {
-        return false;
+        if (!isAcceptableNumberOfArguments(args))
+        {
+            return false;
+        }
+
+        if (!(isDouble(args[0]) &&
+                isDouble(args[1]) &&
+                isDouble(args[2]) &&
+                isDouble(args[3])))
+        {
+            return false;
+        }
+
+        if (args.length == 5 && !isPositiveInteger(args[4]))
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    /**
+     * Prints a help message to the commandline
+     */
+    public static void printExceptionMessage()
+    {
+        System.out.println("The arguments entered were invalid.");
+        System.out.println("Provide arguments in the format:");
+        System.out.println("{pick-up latitude} {pick-up longitude} {drop-off latitude} {drop-off longitude} {number of passengers}");
+        System.out.println("e.g. 4.321 2.468 5.678 1.357 5");
+        System.out.println("The final argument, number of passengers, is optional.");
     }
 }
