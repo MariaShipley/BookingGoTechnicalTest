@@ -12,5 +12,13 @@ public class Part1A
             printExceptionMessage();
             System.exit(0);
         }
+
+        Coordinate pickUpLocation = new Coordinate(Double.parseDouble(args[0]), Double.parseDouble(args[1]));
+        Coordinate dropOffLocation = new Coordinate(Double.parseDouble(args[2]), Double.parseDouble(args[3]));
+
+        if (args.length == 5)
+        {
+            int numPassengers = Integer.parseInt(args[4]);
+        }
     }
 }
