@@ -35,8 +35,9 @@ public class SearchEngine
      * Searches for car options for the given locations and prints in descending price order.
      * @param pickUpLocation Coordinates of the pick-up location
      * @param dropOffLocation Coordinates of the drop-off location
+     * @param numPassengers Number of passengers
      */
-    static void search(Coordinate pickUpLocation, Coordinate dropOffLocation)
+    static void search(Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
     {
         URL url = buildQuery(pickUpLocation, dropOffLocation);
         if (url == null)

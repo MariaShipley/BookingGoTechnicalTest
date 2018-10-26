@@ -22,6 +22,6 @@ public class Part1A
             numPassengers = Integer.parseInt(args[4]);
         }
 
-        SearchEngine.search(pickUpLocation, dropOffLocation);
+        SearchEngine.search(pickUpLocation, dropOffLocation, numPassengers);
     }
 }
