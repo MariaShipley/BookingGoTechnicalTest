@@ -32,4 +32,9 @@ public class RideOption implements Comparable<RideOption>
     {
         return Integer.compare(this.price, rideOption.price);
     }
+
+    String getCarType()
+    {
+        return this.carType;
+    }
 }

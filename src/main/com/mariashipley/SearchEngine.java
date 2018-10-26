@@ -13,6 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
@@ -26,8 +27,8 @@ public class SearchEngine
         put("STANDARD", 4);
         put("EXECUTIVE", 4);
         put("LUXURY", 4);
-        put("PEOPLE CARRIER", 6);
-        put("LUXURY_PEOPLE CARRIER", 6);
+        put("PEOPLE_CARRIER", 6);
+        put("LUXURY_PEOPLE_CARRIER", 6);
         put("MINIBUS", 16);
     }};
 
@@ -56,13 +57,12 @@ public class SearchEngine
         if (rideOptions.isEmpty())
         {
             System.out.println("Sorry. There are no options available that match your query.");
+            return;
         }
 
+        List<RideOption> acceptableRideOptions = filterRidesByCapacity(rideOptions, numPassengers);
         Collections.sort(rideOptions, Collections.reverseOrder());
-        for (RideOption option : rideOptions)
-        {
-            System.out.println(option);
-        }
+        printRideOptions(acceptableRideOptions);
     }
 
     /**
@@ -168,5 +168,27 @@ public class SearchEngine
         final GsonBuilder builder = new GsonBuilder();
         final Gson gson = builder.create();
         return gson.fromJson(jsonString, ApiResponse.class);
+    }
+
+    public static List<RideOption> filterRidesByCapacity(List<RideOption> rideOptions, int numPassengers)
+    {
+        List<RideOption> acceptableRides = new ArrayList<>();
+        for (RideOption option : rideOptions)
+        {
+            if (carCapacity.get(option.getCarType()) >= numPassengers)
+            {
+                acceptableRides.add(option);
+            }
+        }
+
+        return acceptableRides;
+    }
+
+    private static void printRideOptions(List<RideOption> rideOptions)
+    {
+        for (RideOption option : rideOptions)
+        {
+            System.out.println(option);
+        }
     }
 }
