@@ -15,10 +15,13 @@ public class Part1A
 
         Coordinate pickUpLocation = new Coordinate(Double.parseDouble(args[0]), Double.parseDouble(args[1]));
         Coordinate dropOffLocation = new Coordinate(Double.parseDouble(args[2]), Double.parseDouble(args[3]));
+        int numPassengers = 0;
 
         if (args.length == 5)
         {
-            int numPassengers = Integer.parseInt(args[4]);
+            numPassengers = Integer.parseInt(args[4]);
         }
+
+        SearchEngine.search(pickUpLocation, dropOffLocation);
     }
 }
