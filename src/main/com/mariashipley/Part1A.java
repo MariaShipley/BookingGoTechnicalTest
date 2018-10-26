@@ -1,15 +1,14 @@
 package main.com.mariashipley;
 
-import static main.com.mariashipley.InputValidationUtils.isInputValid;
-import static main.com.mariashipley.InputValidationUtils.printExceptionMessage;
+import java.util.List;
 
 public class Part1A
 {
     public static void main(String[] args)
     {
-        if (!isInputValid(args))
+        if (!InputValidationUtils.isInputValid(args))
         {
-            printExceptionMessage();
+            InputValidationUtils.printExceptionMessage();
             System.exit(0);
         }
 
@@ -22,6 +21,8 @@ public class Part1A
             numPassengers = Integer.parseInt(args[4]);
         }
 
-        SearchEngine.search(pickUpLocation, dropOffLocation, numPassengers);
+        List<RideOption> rideOptions = SearchEngine.search(pickUpLocation, dropOffLocation, numPassengers);
+
+        SearchEngine.printRideOptions(rideOptions);
     }
 }

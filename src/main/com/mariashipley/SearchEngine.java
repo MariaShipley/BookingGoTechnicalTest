@@ -36,32 +36,28 @@ public class SearchEngine
      * @param pickUpLocation Coordinates of the pick-up location
      * @param dropOffLocation Coordinates of the drop-off location
      * @param numPassengers Number of passengers
+     * @return list of possbile ride options for the given number of passengers
      */
-    static void search(Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
+    static List<RideOption> search(Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
     {
         URL url = buildQuery(pickUpLocation, dropOffLocation);
         if (url == null)
         {
-            return;
+            return null;
         }
 
         String response = makeApiCall(url);
         ApiResponse apiResponse = deserialize(response);
         if (apiResponse == null)
         {
-            return;
+            return null;
         }
 
         List<RideOption> rideOptions = apiResponse.rideOptions;
-        if (rideOptions.isEmpty())
-        {
-            System.out.println("Sorry. There are no options available that match your query.");
-            return;
-        }
-
         List<RideOption> acceptableRideOptions = filterRidesByCapacity(rideOptions, numPassengers);
-        Collections.sort(rideOptions, Collections.reverseOrder());
-        printRideOptions(acceptableRideOptions);
+        Collections.sort(acceptableRideOptions, Collections.reverseOrder());
+
+        return acceptableRideOptions;
     }
 
     /**
@@ -109,18 +105,6 @@ public class SearchEngine
             if (responseCode == 200)
             {
                 return inputStreamToString(connection.getInputStream());
-            }
-            else
-            {
-                System.out.println("Error code: " + responseCode);
-                if (responseCode == 400)
-                {
-                    System.out.println("Bad Request: Make sure your request was entered in the correct format.");
-                }
-                else if (responseCode == 500)
-                {
-                    System.out.println("Internal Server error: Wait a few seconds and re-submit your request");
-                }
             }
         }
         catch (SocketTimeoutException timeoutException)
@@ -183,11 +167,22 @@ public class SearchEngine
         return acceptableRides;
     }
 
-    private static void printRideOptions(List<RideOption> rideOptions)
+    static void printRideOptions(List<RideOption> rideOptions)
     {
-        for (RideOption option : rideOptions)
+        if (rideOptions == null)
         {
-            System.out.println(option);
+            System.out.println("Something went wrong. Please try again.");
+        }
+        else if (rideOptions.isEmpty())
+        {
+            System.out.println("Sorry. There are no options available that match your query.");
+        }
+        else
+        {
+            for (RideOption option : rideOptions)
+            {
+                System.out.println(option);
+            }
         }
     }
 }
