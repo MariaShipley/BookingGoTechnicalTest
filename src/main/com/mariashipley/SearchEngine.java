@@ -20,7 +20,6 @@ import java.util.List;
 
 public class SearchEngine
 {
-    private static final String DAVE_TAXI_API = "https://techtest.rideways.com/dave";
     private static final int CONNECTION_TIMEOUT = 2000;
 
     private static final HashMap<String, Integer> carCapacity = new HashMap<>() {{
@@ -73,7 +72,7 @@ public class SearchEngine
      */
     public static URL buildQuery(Coordinate pickUpLocation, Coordinate dropOffLocation)
     {
-        StringBuilder query = new StringBuilder(DAVE_TAXI_API);
+        StringBuilder query = new StringBuilder(TaxiApiUrls.DAVE_TAXI_API);
         query.append("?pickup=");
         query.append(pickUpLocation.getLatitude());
         query.append(",");
