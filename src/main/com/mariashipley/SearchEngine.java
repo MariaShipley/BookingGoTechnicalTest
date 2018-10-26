@@ -14,12 +14,22 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 public class SearchEngine
 {
     private static final String DAVE_TAXI_API = "https://techtest.rideways.com/dave";
     private static final int CONNECTION_TIMEOUT = 2000;
+
+    private static final HashMap<String, Integer> carCapacity = new HashMap<>() {{
+        put("STANDARD", 4);
+        put("EXECUTIVE", 4);
+        put("LUXURY", 4);
+        put("PEOPLE CARRIER", 6);
+        put("LUXURY_PEOPLE CARRIER", 6);
+        put("MINIBUS", 16);
+    }};
 
     /**
      * Searches for car options for the given locations and prints in descending price order.
