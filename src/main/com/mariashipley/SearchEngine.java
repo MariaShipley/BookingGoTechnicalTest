@@ -33,14 +33,15 @@ public class SearchEngine
 
     /**
      * Searches for car options for the given locations and prints in descending price order.
+     * @param supplierApi API URL for the supplier
      * @param pickUpLocation Coordinates of the pick-up location
      * @param dropOffLocation Coordinates of the drop-off location
      * @param numPassengers Number of passengers
-     * @return list of possbile ride options for the given number of passengers
+     * @return list of possible ride options for the given number of passengers
      */
-    static List<RideOption> search(Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
+    static List<RideOption> search(String supplierApi, Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
     {
-        URL url = buildQuery(pickUpLocation, dropOffLocation);
+        URL url = buildQuery(supplierApi, pickUpLocation, dropOffLocation);
         if (url == null)
         {
             return null;
@@ -61,14 +62,32 @@ public class SearchEngine
     }
 
     /**
+     * Searches for car options for the given locations and prints in descending price order.
+     * @param pickUpLocation Coordinates of the pick-up location
+     * @param dropOffLocation Coordinates of the drop-off location
+     * @param numPassengers Number of passengers
+     * @return list of best possible ride options from all suppliers for the given number of passengers
+     */
+    static List<RideOption> searchAll(Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
+    {
+        List<RideOption> bestRideOptions = new ArrayList<>();
+        List<RideOption> davesRides = search(TaxiApiUrls.DAVE_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
+        List<RideOption> ericsRides = search(TaxiApiUrls.ERIC_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
+        List<RideOption> jeffsRides = search(TaxiApiUrls.JEFF_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
+
+        return bestRideOptions;
+    }
+
+    /**
      * Constructs a URL of the API query with the given coordinates.
+     * @param supplierApi API URL for the supplier
      * @param pickUpLocation Coordinates of the pick-up location
      * @param dropOffLocation Coordinates of the drop-off location
      * @return URL of the query to access the API
      */
-    public static URL buildQuery(Coordinate pickUpLocation, Coordinate dropOffLocation)
+    public static URL buildQuery(String supplierApi, Coordinate pickUpLocation, Coordinate dropOffLocation)
     {
-        StringBuilder query = new StringBuilder(TaxiApiUrls.DAVE_TAXI_API);
+        StringBuilder query = new StringBuilder(supplierApi);
         query.append("?pickup=");
         query.append(pickUpLocation.getLatitude());
         query.append(",");
@@ -167,6 +186,10 @@ public class SearchEngine
         return acceptableRides;
     }
 
+    /**
+     * Prints ride options to the commandline
+     * @param rideOptions list of ride options available
+     */
     static void printRideOptions(List<RideOption> rideOptions)
     {
         if (rideOptions == null)

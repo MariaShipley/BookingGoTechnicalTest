@@ -21,7 +21,7 @@ public class Part1A
             numPassengers = Integer.parseInt(args[4]);
         }
 
-        List<RideOption> rideOptions = SearchEngine.search(pickUpLocation, dropOffLocation, numPassengers);
+        List<RideOption> rideOptions = SearchEngine.search(TaxiApiUrls.DAVE_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
 
         SearchEngine.printRideOptions(rideOptions);
     }
