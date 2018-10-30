@@ -1,17 +1,13 @@
 package test.com.mariashipley;
 
 import main.com.mariashipley.Coordinate;
-import main.com.mariashipley.RideOption;
 import main.com.mariashipley.SupplierInfo;
 import org.junit.jupiter.api.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Arrays;
-import java.util.List;
 
 import static main.com.mariashipley.SearchEngine.buildQuery;
-import static main.com.mariashipley.ResponseProcessing.filterRidesByCapacity;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class SearchEngineTest
