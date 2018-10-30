@@ -1,13 +1,12 @@
 package com.mariashipley;
 
-import com.mariashipley.RideOption;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RideOptionTest
+class RideOptionTest
 {
-    RideOption rideOption = new RideOption("STANDARD", 300);
+    private RideOption rideOption = new RideOption("STANDARD", 300);
 
     @Test
     void toString_RideOption_ConvertsRideOptionToCorrectFormat()

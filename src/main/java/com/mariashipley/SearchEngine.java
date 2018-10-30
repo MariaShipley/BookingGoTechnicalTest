@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class SearchEngine
+class SearchEngine
 {
     private static final int CONNECTION_TIMEOUT = 2000;
 
@@ -86,7 +86,7 @@ public class SearchEngine
      * @param dropOffLocation Coordinates of the drop-off location
      * @return URL of the query to access the API
      */
-    public static URL buildQuery(String supplierApi, Coordinate pickUpLocation, Coordinate dropOffLocation)
+    static URL buildQuery(String supplierApi, Coordinate pickUpLocation, Coordinate dropOffLocation)
     {
         StringBuilder query = new StringBuilder(supplierApi);
         query.append("?pickup=");

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class ResponseProcessing
+class ResponseProcessing
 {
     private static final HashMap<String, Integer> carCapacity = new HashMap<>() {{
         put("STANDARD", 4);
@@ -62,7 +62,7 @@ public class ResponseProcessing
      * @param numPassengers number of passengers
      * @return list of rides available with capacity to fit the given number of passengers
      */
-    public static List<RideOption> filterRidesByCapacity(List<RideOption> rideOptions, int numPassengers)
+    static List<RideOption> filterRidesByCapacity(List<RideOption> rideOptions, int numPassengers)
     {
         List<RideOption> acceptableRides = new ArrayList<>();
         for (RideOption option : rideOptions)
@@ -81,7 +81,7 @@ public class ResponseProcessing
      * @param rideOptions list of ride options
      * @return list of cheapest rideOptions per car type
      */
-    public static List<RideOption> filterCarTypeByPrice(List<RideOption> rideOptions)
+    static List<RideOption> filterCarTypeByPrice(List<RideOption> rideOptions)
     {
         HashMap<String, RideOption> bestCarTypePrice = new HashMap<>();
 
@@ -94,27 +94,24 @@ public class ResponseProcessing
             }
         }
 
-        return new ArrayList<RideOption>(bestCarTypePrice.values());
+        return new ArrayList<>(bestCarTypePrice.values());
     }
 
     /**
      * Searches all suppliers for car options for the given locations
      * @param supplier supplier of ride
      * @param ridesOptions list of ride options
-     * @return list of ride options with the supplier set to the input supplier
      */
-    static List<RideOption> setSupplierOnList(String supplier, List<RideOption> ridesOptions)
+    static void setSupplierOnList(String supplier, List<RideOption> ridesOptions)
     {
         if (ridesOptions == null)
         {
-            return null;
+            return;
         }
 
         for (RideOption ride : ridesOptions)
         {
             ride.setSupplier(supplier);
         }
-
-        return ridesOptions;
     }
 }

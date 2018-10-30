@@ -1,13 +1,13 @@
 package com.mariashipley;
 
-public class InputValidationUtils
+class InputValidationUtils
 {
     /**
      * Checks if a given string can be converted to a double.
      * @param string The string to be converted.
      * @return true if the string can be converted into a double, otherwise false.
      */
-    public static boolean isDouble(String string)
+    static boolean isDouble(String string)
     {
         try
         {
@@ -25,11 +25,11 @@ public class InputValidationUtils
      * @param string The string to be converted.
      * @return true if the string can be converted into a positive integer, otherwise false.
      */
-    public static boolean isPositiveInteger(String string)
+    static boolean isPositiveInteger(String string)
     {
         try
         {
-            Integer num = Integer.parseInt(string);
+            int num = Integer.parseInt(string);
             return num > 0;
         }
         catch (NumberFormatException e)
@@ -43,14 +43,9 @@ public class InputValidationUtils
      * @param args The array of commandline arguments
      * @return true if the number of arguments is 4 or 5, otherwise false.
      */
-    public static boolean isAcceptableNumberOfArguments(String[] args)
+    static boolean isAcceptableNumberOfArguments(String[] args)
     {
-        if (args.length < 4 || args.length > 5)
-        {
-            return false;
-        }
-
-        return true;
+        return args.length == 4 || args.length == 5;
     }
 
     // does this method need unit tests?
@@ -59,7 +54,7 @@ public class InputValidationUtils
      * @param args The array of commandline arguments
      * @return true if the arguments are valid, otherwise false.
      */
-    public static boolean isInputValid(String args[])
+    static boolean isInputValid(String args[])
     {
         if (!isAcceptableNumberOfArguments(args))
         {
@@ -85,7 +80,7 @@ public class InputValidationUtils
     /**
      * Prints a help message to the commandline
      */
-    public static void printExceptionMessage()
+    static void printExceptionMessage()
     {
         System.out.println("The arguments entered were invalid.");
         System.out.println("Provide arguments in the format:");

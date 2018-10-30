@@ -1,15 +1,14 @@
 package com.mariashipley;
 
-import com.mariashipley.ResponseProcessing;
-import com.mariashipley.RideOption;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class ResponseProcessingTest
+class ResponseProcessingTest
 {
     @Test
     void filterRidesByCapacity_ListOfRideOptions_ReturnsArrayOfAcceptableRides()
@@ -34,7 +33,7 @@ public class ResponseProcessingTest
         RideOption r2 = new RideOption("MINIBUS", 5677, "JEFF");
         RideOption r3 = new RideOption("MINIBUS", 5679, "ERIC");
 
-        List<RideOption> expectedRides = Arrays.asList(r2);
+        List<RideOption> expectedRides = Collections.singletonList(r2);
 
         List<RideOption> rides = Arrays.asList(r1, r2, r3);
 
