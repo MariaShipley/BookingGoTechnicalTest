@@ -1,12 +1,12 @@
 package test.com.mariashipley;
 
+import main.com.mariashipley.ResponseProcessing;
 import main.com.mariashipley.RideOption;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 import java.util.List;
 
-import static main.com.mariashipley.ResponseProcessing.filterRidesByCapacity;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ResponseProcessingTest
@@ -24,6 +24,38 @@ public class ResponseProcessingTest
 
         List<RideOption> rides = Arrays.asList(r1, r2, r3, r4);
 
-        assertEquals(expectedRides, filterRidesByCapacity(rides, numPassengers));
+        assertEquals(expectedRides, ResponseProcessing.filterRidesByCapacity(rides, numPassengers));
+    }
+
+    @Test
+    void filterCarTypeByPrice_ListOfRideOptions_ReturnsCheapestOfEachCarType()
+    {
+        RideOption r1 = new RideOption("MINIBUS", 5678, "DAVE");
+        RideOption r2 = new RideOption("MINIBUS", 5677, "JEFF");
+        RideOption r3 = new RideOption("MINIBUS", 5679, "ERIC");
+
+        List<RideOption> expectedRides = Arrays.asList(r2);
+
+        List<RideOption> rides = Arrays.asList(r1, r2, r3);
+
+        assertEquals(expectedRides, ResponseProcessing.filterCarTypeByPrice(rides));
+    }
+
+    @Test
+    void filterCarTypeByPrice_ListOfRideOptions_ReturnsCorrectLengthList()
+    {
+        RideOption r1 = new RideOption("STANDARD", 1000, "DAVE");
+        RideOption r2 = new RideOption("MINIBUS", 5678, "DAVE");
+        RideOption r3 = new RideOption("MINIBUS", 5677, "JEFF");
+        RideOption r4 = new RideOption("MINIBUS", 5679, "ERIC");
+        RideOption r5 = new RideOption("LUXURY", 900, "DAVE");
+
+        List<RideOption> rides = Arrays.asList(r1, r2, r3, r4, r5);
+
+        int expectedListLength = 3;
+
+        int actualListLength = ResponseProcessing.filterCarTypeByPrice(rides).size();
+
+        assertEquals(expectedListLength, actualListLength);
     }
 }

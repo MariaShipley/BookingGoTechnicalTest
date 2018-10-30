@@ -81,7 +81,7 @@ public class ResponseProcessing
      * @param rideOptions list of ride options
      * @return list of cheapest rideOptions per car type
      */
-    static List<RideOption> filterCarTypeByPrice(List<RideOption> rideOptions)
+    public static List<RideOption> filterCarTypeByPrice(List<RideOption> rideOptions)
     {
         HashMap<String, RideOption> bestCarTypePrice = new HashMap<>();
 
