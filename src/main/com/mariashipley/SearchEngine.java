@@ -40,6 +40,7 @@ public class SearchEngine
 
         List<RideOption> rideOptions = apiResponse.rideOptions;
         List<RideOption> acceptableRideOptions = ResponseProcessing.filterRidesByCapacity(rideOptions, numPassengers);
+        ResponseProcessing.setSupplierOnList(apiResponse.supplierId, acceptableRideOptions);
         Collections.sort(acceptableRideOptions, Collections.reverseOrder());
 
         return acceptableRideOptions;
@@ -54,9 +55,9 @@ public class SearchEngine
      */
     static List<RideOption> searchAll(Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
     {
-        List<RideOption> davesRides = ResponseProcessing.setSupplierOnList(SupplierInfo.DAVE_TAXI_NAME, search(SupplierInfo.DAVE_TAXI_API, pickUpLocation, dropOffLocation, numPassengers));
-        List<RideOption> ericsRides = ResponseProcessing.setSupplierOnList(SupplierInfo.ERIC_TAXI_NAME, search(SupplierInfo.ERIC_TAXI_API, pickUpLocation, dropOffLocation, numPassengers));
-        List<RideOption> jeffsRides = ResponseProcessing.setSupplierOnList(SupplierInfo.JEFF_TAXI_NAME, search(SupplierInfo.JEFF_TAXI_API, pickUpLocation, dropOffLocation, numPassengers));
+        List<RideOption> davesRides = search(SupplierInfo.DAVE_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
+        List<RideOption> ericsRides = search(SupplierInfo.ERIC_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
+        List<RideOption> jeffsRides = search(SupplierInfo.JEFF_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
 
         List<RideOption> allRides = new ArrayList<>();
         if (davesRides != null)
@@ -142,7 +143,7 @@ public class SearchEngine
      * Prints ride options to the commandline
      * @param rideOptions list of ride options available
      */
-    static void printRideOptions(List<RideOption> rideOptions)
+    static void printRideOptions(List<RideOption> rideOptions, boolean printSupplier)
     {
         if (rideOptions == null)
         {
@@ -156,7 +157,14 @@ public class SearchEngine
         {
             for (RideOption option : rideOptions)
             {
-                System.out.println(option);
+                if (printSupplier)
+                {
+                    System.out.println(option);
+                }
+                else
+                {
+                    System.out.println(option.getBasicInfoString());
+                }
             }
         }
     }

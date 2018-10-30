@@ -23,6 +23,6 @@ public class Part1B
 
         List<RideOption> rideOptions = SearchEngine.searchAll(pickUpLocation, dropOffLocation, numPassengers);
 
-        SearchEngine.printRideOptions(rideOptions);
+        SearchEngine.printRideOptions(rideOptions, true);
     }
 }

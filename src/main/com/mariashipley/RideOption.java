@@ -41,7 +41,7 @@ public class RideOption implements Comparable<RideOption>
     {
         if (supplier == null || supplier.isEmpty())
         {
-            return carType + " - " + price;
+            return getBasicInfoString();
         }
         else
         {
@@ -74,5 +74,10 @@ public class RideOption implements Comparable<RideOption>
     public void setSupplier(String supplier)
     {
         this.supplier = supplier;
+    }
+
+    public String getBasicInfoString()
+    {
+        return carType + " - " + price;
     }
 }

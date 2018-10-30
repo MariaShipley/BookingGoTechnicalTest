@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2314c68c-d72a-43e5-91f2-fc9d5498e525" name="Default Changelist" comment="Actually commit ResponseProcessing">
+    <list default="true" id="2314c68c-d72a-43e5-91f2-fc9d5498e525" name="Default Changelist" comment="Assign supplier to RideOption earlier. Changed print method to take a boolean">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,14 +39,14 @@
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="iml" value="2" />
-          <entry key="java" value="41" />
+          <entry key="java" value="51" />
           <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="41" />
+          <entry key="JAVA" value="51" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="9" />
         </counts>
@@ -50,14 +55,14 @@
         <counts>
           <entry key="dummy" value="18" />
           <entry key="gitignore" value="5" />
-          <entry key="java" value="8811" />
-          <entry key="txt" value="1620" />
+          <entry key="java" value="9131" />
+          <entry key="txt" value="1765" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8811" />
-          <entry key="PLAIN_TEXT" value="1643" />
+          <entry key="JAVA" value="9131" />
+          <entry key="PLAIN_TEXT" value="1788" />
         </counts>
       </usages-collector>
     </session>
@@ -65,10 +70,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ResponseProcessing.java">
+        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
+            <state relative-caret-position="102">
+              <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,8 +93,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            <state relative-caret-position="357">
+              <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -98,21 +112,9 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/InputValidationUtilsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
+            <state relative-caret-position="-385">
               <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -131,14 +133,61 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+            <state relative-caret-position="272">
+              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/RideOptionTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="142">
+              <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+              <folding>
+                <element signature="e#1452#1453#0" expanded="true" />
+                <element signature="e#1487#1488#0" expanded="true" />
+                <element signature="e#1520#1521#0" expanded="true" />
+                <element signature="e#1553#1554#0" expanded="true" />
+                <element signature="e#1769#1770#0" expanded="true" />
+                <element signature="e#1815#1816#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
             </state>
           </provider>
         </entry>
@@ -160,6 +209,7 @@
       <find>filter</find>
       <find>carCapacity</find>
       <find>setSupplierOnList</find>
+      <find>printsu</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -172,20 +222,20 @@
         <option value="$PROJECT_DIR$/src/test/com/mariashipley/InputValidationUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/InputValidationUtils.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/Coordinates.java" />
-        <option value="$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java" />
         <option value="$PROJECT_DIR$/src/test/com/mariashipley/RideOptionTest.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/Coordinate.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/CarCapacity.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/ResultFilter.java" />
-        <option value="$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/TaxiApiUrls.java" />
-        <option value="$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/ResponseProcessing.java" />
-        <option value="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" />
         <option value="$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java" />
         <option value="$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java" />
+        <option value="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java" />
+        <option value="$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java" />
       </list>
     </option>
   </component>
@@ -277,7 +327,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Part1B">
+  <component name="RunManager" selected="JUnit.test.com.mariashipley in RidewaysTaxiApp">
     <configuration name="Part1A" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.com.mariashipley.Part1A" />
       <module name="RidewaysTaxiApp" />
@@ -302,20 +352,6 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InputValidationUtilsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="RidewaysTaxiApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.com.mariashipley.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test.com.mariashipley" />
-      <option name="MAIN_CLASS_NAME" value="test.com.mariashipley.InputValidationUtilsTest" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -362,21 +398,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="test.com.mariashipley in RidewaysTaxiApp" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RidewaysTaxiApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.com.mariashipley.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.com.mariashipley" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.Part1A" />
       <item itemvalue="Application.Part1B" />
-      <item itemvalue="JUnit.InputValidationUtilsTest" />
       <item itemvalue="JUnit.SearchEngineTest" />
       <item itemvalue="JUnit.RideOptionTest" />
       <item itemvalue="JUnit.ResponseProcessingTest" />
+      <item itemvalue="JUnit.test.com.mariashipley in RidewaysTaxiApp" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.test.com.mariashipley in RidewaysTaxiApp" />
         <item itemvalue="Application.Part1B" />
         <item itemvalue="JUnit.ResponseProcessingTest" />
         <item itemvalue="JUnit.SearchEngineTest" />
         <item itemvalue="JUnit.RideOptionTest" />
-        <item itemvalue="JUnit.InputValidationUtilsTest" />
       </list>
     </recent_temporary>
   </component>
@@ -573,13 +623,17 @@
       <option name="project" value="LOCAL" />
       <updated>1540920013330</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Sort best responses before printing">
+      <created>1540920778505</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1540920778505</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RideOptionTest - 2018.10.26 at 12h 07m 26s.xml">
-      <configuration name="RideOptionTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="SearchEngineTest - 2018.10.26 at 14h 54m 23s.xml">
       <configuration name="SearchEngineTest" configurationId="JUnit" />
     </history-entry>
@@ -606,6 +660,9 @@
     </history-entry>
     <history-entry file="ResponseProcessingTest - 2018.10.30 at 17h 19m 43s.xml">
       <configuration name="ResponseProcessingTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="test_com_mariashipley_in_RidewaysTaxiApp - 2018.10.30 at 18h 00m 15s.xml">
+      <configuration name="test.com.mariashipley in RidewaysTaxiApp" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -698,8 +755,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Create Coordinate object to group latitudes and longitudes" />
-    <MESSAGE value="Assign input args to variables" />
     <MESSAGE value="Create SearchEngine class, with stubbed buildQuery method and tests" />
     <MESSAGE value="Populated buildQuery method" />
     <MESSAGE value="RideOption class and corresponding tests" />
@@ -723,7 +778,9 @@
     <MESSAGE value="Actually commit ResponseProcessing" />
     <MESSAGE value="Remove redundant imports" />
     <MESSAGE value="Moved filter test - test passes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moved filter test - test passes" />
+    <MESSAGE value="Sort best responses before printing" />
+    <MESSAGE value="Assign supplier to RideOption earlier. Changed print method to take a boolean" />
+    <option name="LAST_COMMIT_MESSAGE" value="Assign supplier to RideOption earlier. Changed print method to take a boolean" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
@@ -756,13 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/RideOptionTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-11.0.1/lib/src.zip!/java.base/java/util/List.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
@@ -786,9 +836,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Coordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ResponseProcessing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="930">
+          <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="58" lean-forward="true" selection-start-line="25" selection-start-column="58" selection-end-line="25" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="9" lean-forward="true" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/InputValidationUtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
+        <state relative-caret-position="-385">
           <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -806,41 +887,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java">
+    <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state relative-caret-position="272">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Coordinate.java">
+    <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/RideOptionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="25" />
+        <state relative-caret-position="415">
+          <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -854,37 +914,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+        <state relative-caret-position="102">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ResponseProcessing.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="105" column="28" selection-start-line="105" selection-start-column="28" selection-end-line="105" selection-end-column="28" />
+        <state relative-caret-position="142">
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#1452#1453#0" expanded="true" />
+            <element signature="e#1487#1488#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1553#1554#0" expanded="true" />
+            <element signature="e#1769#1770#0" expanded="true" />
+            <element signature="e#1815#1816#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="40" selection-start-line="75" selection-start-column="40" selection-end-line="75" selection-end-column="40" />
+        <state relative-caret-position="142">
+          <caret line="76" column="20" selection-start-line="76" selection-start-column="20" selection-end-line="76" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

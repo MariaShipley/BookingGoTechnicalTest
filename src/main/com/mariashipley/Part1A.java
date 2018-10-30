@@ -23,6 +23,6 @@ public class Part1A
 
         List<RideOption> rideOptions = SearchEngine.search(SupplierInfo.DAVE_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
 
-        SearchEngine.printRideOptions(rideOptions);
+        SearchEngine.printRideOptions(rideOptions, false);
     }
 }
