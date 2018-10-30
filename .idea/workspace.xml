@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2314c68c-d72a-43e5-91f2-fc9d5498e525" name="Default Changelist" comment="Change TaxiApiInfo to SupplierInfo&#10;Added filter method to get best price">
+    <list default="true" id="2314c68c-d72a-43e5-91f2-fc9d5498e525" name="Default Changelist" comment="Actually commit ResponseProcessing">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -54,24 +49,24 @@
           <entry key="dummy" value="18" />
           <entry key="gitignore" value="5" />
           <entry key="java" value="8807" />
-          <entry key="txt" value="1468" />
+          <entry key="txt" value="1561" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="8807" />
-          <entry key="PLAIN_TEXT" value="1491" />
+          <entry key="PLAIN_TEXT" value="1584" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2754">
-              <caret line="162" selection-start-line="162" selection-end-line="162" />
+            <state relative-caret-position="289">
+              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -91,7 +86,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="408">
@@ -279,7 +274,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Part1B">
+  <component name="RunManager" selected="JUnit.ResponseProcessingTest">
     <configuration name="Part1A" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.com.mariashipley.Part1A" />
       <module name="RidewaysTaxiApp" />
@@ -322,6 +317,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ResponseProcessingTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="RidewaysTaxiApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.com.mariashipley.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test.com.mariashipley" />
+      <option name="MAIN_CLASS_NAME" value="test.com.mariashipley.ResponseProcessingTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RideOptionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="RidewaysTaxiApp" />
       <extension name="coverage">
@@ -356,9 +365,11 @@
       <item itemvalue="JUnit.InputValidationUtilsTest" />
       <item itemvalue="JUnit.SearchEngineTest" />
       <item itemvalue="JUnit.RideOptionTest" />
+      <item itemvalue="JUnit.ResponseProcessingTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ResponseProcessingTest" />
         <item itemvalue="Application.Part1B" />
         <item itemvalue="JUnit.SearchEngineTest" />
         <item itemvalue="JUnit.RideOptionTest" />
@@ -531,7 +542,21 @@
       <option name="project" value="LOCAL" />
       <updated>1540918231117</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Moved methods from SearchEngine to ResponseProcessing">
+      <created>1540919515566</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1540919515566</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Actually commit ResponseProcessing">
+      <created>1540919582987</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1540919582987</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -577,8 +602,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14362416" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14362416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -590,7 +616,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.19716312" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.19716312" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.18723404" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32765958" />
@@ -656,7 +682,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added tests for input validation with stubbed methods" />
     <MESSAGE value="Populated input validation methods. All tests now pass." />
     <MESSAGE value="Call check for valid input from main" />
     <MESSAGE value="Create Coordinate object to group latitudes and longitudes" />
@@ -680,7 +705,9 @@
     <MESSAGE value="Added supplier property to RideOption and created getter and setter methods" />
     <MESSAGE value="Add name constants to supplier info" />
     <MESSAGE value="Change TaxiApiInfo to SupplierInfo&#10;Added filter method to get best price" />
-    <option name="LAST_COMMIT_MESSAGE" value="Change TaxiApiInfo to SupplierInfo&#10;Added filter method to get best price" />
+    <MESSAGE value="Moved methods from SearchEngine to ResponseProcessing" />
+    <MESSAGE value="Actually commit ResponseProcessing" />
+    <option name="LAST_COMMIT_MESSAGE" value="Actually commit ResponseProcessing" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
@@ -807,23 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ResponseProcessing.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="935">
@@ -840,11 +850,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2754">
-          <caret line="162" selection-start-line="162" selection-end-line="162" />
+        <state relative-caret-position="289">
+          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ResponseProcessing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
         </state>
       </provider>
     </entry>

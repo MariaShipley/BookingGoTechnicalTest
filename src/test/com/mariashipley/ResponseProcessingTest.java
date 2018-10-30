@@ -1,29 +1,29 @@
 package test.com.mariashipley;
 
 import main.com.mariashipley.RideOption;
+import org.junit.jupiter.api.Test;
 
+import java.util.Arrays;
 import java.util.List;
+
+import static main.com.mariashipley.ResponseProcessing.filterRidesByCapacity;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ResponseProcessingTest
 {
-    /**
-     * Searches all suppliers for car options for the given locations
-     * @param supplier supplier of ride
-     * @param ridesOptions list of ride options
-     * @return list of ride options with the supplier set to the input supplier
-     */
-    private static List<RideOption> setSupplierOnList(String supplier, List<RideOption> ridesOptions)
+    @Test
+    void filterRidesByCapacity_ListOfRideOptions_ReturnsArrayOfAcceptableRides()
     {
-        if (ridesOptions == null)
-        {
-            return null;
-        }
+        int numPassengers = 6;
+        RideOption r1 = new RideOption("STANDARD", 1234); // 4 passengers
+        RideOption r2 = new RideOption("MINIBUS", 5678); // 16 passengers
+        RideOption r3 = new RideOption("LUXURY", 9810); // 4 passengers
+        RideOption r4 = new RideOption("PEOPLE_CARRIER", 1112); // 6 passengers
 
-        for (RideOption ride : ridesOptions)
-        {
-            ride.setSupplier(supplier);
-        }
+        List<RideOption> expectedRides = Arrays.asList(r2, r4);
 
-        return ridesOptions;
+        List<RideOption> rides = Arrays.asList(r1, r2, r3, r4);
+
+        assertEquals(expectedRides, filterRidesByCapacity(rides, numPassengers));
     }
 }
