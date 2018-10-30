@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="2314c68c-d72a-43e5-91f2-fc9d5498e525" name="Default Changelist" comment="Change TaxiApiInfo to SupplierInfo&#10;Added filter method to get best price">
       <change afterPath="$PROJECT_DIR$/.idea/libraries/com_google_code_gson_gson_2_8_5.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/com/mariashipley/TaxiApiUrls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,14 +37,14 @@
         <counts>
           <entry key="gitignore" value="2" />
           <entry key="iml" value="2" />
-          <entry key="java" value="32" />
+          <entry key="java" value="40" />
           <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="2" />
-          <entry key="JAVA" value="32" />
+          <entry key="JAVA" value="40" />
           <entry key="PLAIN_TEXT" value="2" />
           <entry key="XML" value="9" />
         </counts>
@@ -53,13 +53,13 @@
         <counts>
           <entry key="dummy" value="18" />
           <entry key="gitignore" value="5" />
-          <entry key="java" value="8582" />
+          <entry key="java" value="8807" />
           <entry key="txt" value="1468" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8582" />
+          <entry key="JAVA" value="8807" />
           <entry key="PLAIN_TEXT" value="1491" />
         </counts>
       </usages-collector>
@@ -70,8 +70,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-37">
-              <caret line="117" column="92" selection-start-line="117" selection-start-column="92" selection-end-line="117" selection-end-column="92" />
+            <state relative-caret-position="2754">
+              <caret line="162" selection-start-line="162" selection-end-line="162" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,44 +80,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java">
+        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ResponseProcessing.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
-              <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-              <folding>
-                <element signature="e#1272#1273#0" expanded="true" />
-                <element signature="e#1307#1308#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="221">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
             </state>
           </provider>
         </entry>
@@ -125,8 +103,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
+            <state relative-caret-position="382">
+              <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -171,6 +161,7 @@
       <find>public</find>
       <find>makeapi</find>
       <find>filter</find>
+      <find>carCapacity</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,15 +177,17 @@
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java" />
         <option value="$PROJECT_DIR$/src/test/com/mariashipley/RideOptionTest.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/Coordinate.java" />
-        <option value="$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/CarCapacity.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/ResultFilter.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java" />
-        <option value="$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/TaxiApiUrls.java" />
-        <option value="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/SupplierInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java" />
         <option value="$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java" />
+        <option value="$PROJECT_DIR$/src/main/com/mariashipley/ResponseProcessing.java" />
+        <option value="$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java" />
+        <option value="$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java" />
       </list>
     </option>
   </component>
@@ -236,6 +229,12 @@
             </path>
             <path>
               <item name="RidewaysTaxiApp" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RidewaysTaxiApp" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="mariashipley" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RidewaysTaxiApp" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
             <path>
@@ -261,6 +260,9 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="main.com.mariashipley.ResponseProcessing" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\maria\IdeaProjects\RidewaysTaxiApp" />
     </key>
@@ -277,9 +279,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Part1A">
+  <component name="RunManager" selected="Application.Part1B">
     <configuration name="Part1A" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="main.com.mariashipley.Part1A" />
+      <module name="RidewaysTaxiApp" />
+      <option name="PROGRAM_PARAMETERS" value="1.2 3.4 5.6 7.8" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="main.com.mariashipley.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Part1B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="main.com.mariashipley.Part1B" />
       <module name="RidewaysTaxiApp" />
       <option name="PROGRAM_PARAMETERS" value="1.2 3.4 5.6 7.8" />
       <extension name="coverage">
@@ -336,12 +352,14 @@
     </configuration>
     <list>
       <item itemvalue="Application.Part1A" />
+      <item itemvalue="Application.Part1B" />
       <item itemvalue="JUnit.InputValidationUtilsTest" />
       <item itemvalue="JUnit.SearchEngineTest" />
       <item itemvalue="JUnit.RideOptionTest" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Part1B" />
         <item itemvalue="JUnit.SearchEngineTest" />
         <item itemvalue="JUnit.RideOptionTest" />
         <item itemvalue="JUnit.InputValidationUtilsTest" />
@@ -506,7 +524,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540916420453</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Change TaxiApiInfo to SupplierInfo&#10;Added filter method to get best price">
+      <created>1540918231117</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1540918231117</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -552,24 +577,23 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14362416" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14362416" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25248227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32907802" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.19716312" />
+      <window_info anchor="bottom" id="Version Control" order="7" visible="true" weight="0.19716312" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.18723404" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.32765958" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32765958" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -675,7 +699,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -694,13 +717,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="37" column="32" lean-forward="true" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Coordinate.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -727,26 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/InputValidationUtilsTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -767,14 +763,71 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/SearchEngineTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="27" column="5" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/mariashipley/ResponseProcessingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="9" lean-forward="true" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ApiResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Coordinate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="23" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1B.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/ResponseProcessing.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/RideOption.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="48" column="9" lean-forward="true" selection-start-line="48" selection-start-column="9" selection-end-line="48" selection-end-column="9" />
-          <folding>
-            <element signature="e#1272#1273#0" expanded="true" />
-            <element signature="e#1307#1308#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="935">
+          <caret line="58" column="11" selection-start-line="58" selection-start-column="11" selection-end-line="58" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -785,17 +838,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/Part1A.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
-          <caret line="7" column="5" lean-forward="true" selection-start-line="7" selection-start-column="5" selection-end-line="7" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/mariashipley/SearchEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-37">
-          <caret line="117" column="92" selection-start-line="117" selection-start-column="92" selection-end-line="117" selection-end-column="92" />
+        <state relative-caret-position="2754">
+          <caret line="162" selection-start-line="162" selection-end-line="162" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
