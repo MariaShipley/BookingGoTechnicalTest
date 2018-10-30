@@ -1,8 +1,8 @@
-package test.com.mariashipley;
+package com.mariashipley;
 
 import org.junit.jupiter.api.Test;
 
-import static main.com.mariashipley.InputValidationUtils.*;
+import static com.mariashipley.InputValidationUtils.*;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 

@@ -1,8 +1,8 @@
-package main.com.mariashipley;
+package com.mariashipley;
 
 import java.util.List;
 
-public class Part1B
+public class Part1A
 {
     public static void main(String[] args)
     {
@@ -21,8 +21,8 @@ public class Part1B
             numPassengers = Integer.parseInt(args[4]);
         }
 
-        List<RideOption> rideOptions = SearchEngine.searchAll(pickUpLocation, dropOffLocation, numPassengers);
+        List<RideOption> rideOptions = SearchEngine.search(SupplierInfo.DAVE_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
 
-        SearchEngine.printRideOptions(rideOptions, true);
+        SearchEngine.printRideOptions(rideOptions, false);
     }
 }

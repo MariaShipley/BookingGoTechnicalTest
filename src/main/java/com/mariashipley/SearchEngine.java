@@ -1,4 +1,4 @@
-package main.com.mariashipley;
+package com.mariashipley;
 
 import javax.net.ssl.HttpsURLConnection;
 import java.net.MalformedURLException;

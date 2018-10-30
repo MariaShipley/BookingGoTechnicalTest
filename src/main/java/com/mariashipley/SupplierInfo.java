@@ -1,4 +1,4 @@
-package main.com.mariashipley;
+package com.mariashipley;
 
 public class SupplierInfo
 {

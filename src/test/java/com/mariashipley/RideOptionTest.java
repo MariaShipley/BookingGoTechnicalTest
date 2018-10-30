@@ -1,6 +1,6 @@
-package test.com.mariashipley;
+package com.mariashipley;
 
-import main.com.mariashipley.RideOption;
+import com.mariashipley.RideOption;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

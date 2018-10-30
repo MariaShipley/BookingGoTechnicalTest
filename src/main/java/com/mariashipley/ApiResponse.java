@@ -1,4 +1,4 @@
-package main.com.mariashipley;
+package com.mariashipley;
 
 import com.google.gson.annotations.SerializedName;
 
