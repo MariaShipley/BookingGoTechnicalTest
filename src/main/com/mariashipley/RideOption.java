@@ -56,22 +56,22 @@ public class RideOption implements Comparable<RideOption>
         return Integer.compare(this.price, rideOption.price);
     }
 
-    String getCarType()
+    public String getCarType()
     {
         return this.carType;
     }
 
-    int getPrice()
+    public int getPrice()
     {
         return this.price;
     }
 
-    String getSupplier()
+    public String getSupplier()
     {
         return this.supplier;
     }
 
-    void setSupplier(String supplier)
+    public void setSupplier(String supplier)
     {
         this.supplier = supplier;
     }
