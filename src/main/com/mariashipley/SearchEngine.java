@@ -63,6 +63,27 @@ public class SearchEngine
 
     /**
      * Searches all suppliers for car options for the given locations
+     * @param supplier supplier of ride
+     * @param ridesOptions list of ride options
+     * @return list of ride options with the supplier set to the input supplier
+     */
+    private static List<RideOption> setSupplierOnList(String supplier, List<RideOption> ridesOptions)
+    {
+        if (ridesOptions == null)
+        {
+            return null;
+        }
+
+        for (RideOption ride : ridesOptions)
+        {
+            ride.setSupplier(supplier);
+        }
+
+        return ridesOptions;
+    }
+
+    /**
+     * Searches all suppliers for car options for the given locations
      * @param pickUpLocation Coordinates of the pick-up location
      * @param dropOffLocation Coordinates of the drop-off location
      * @param numPassengers Number of passengers
@@ -70,12 +91,48 @@ public class SearchEngine
      */
     static List<RideOption> searchAll(Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
     {
-        List<RideOption> bestRideOptions = new ArrayList<>();
-        List<RideOption> davesRides = search(TaxiApiUrls.DAVE_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
-        List<RideOption> ericsRides = search(TaxiApiUrls.ERIC_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
-        List<RideOption> jeffsRides = search(TaxiApiUrls.JEFF_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
+        List<RideOption> davesRides = setSupplierOnList(SupplierInfo.DAVE_TAXI_NAME, search(SupplierInfo.DAVE_TAXI_API, pickUpLocation, dropOffLocation, numPassengers));
+        List<RideOption> ericsRides = setSupplierOnList(SupplierInfo.ERIC_TAXI_NAME, search(SupplierInfo.ERIC_TAXI_API, pickUpLocation, dropOffLocation, numPassengers));
+        List<RideOption> jeffsRides = setSupplierOnList(SupplierInfo.JEFF_TAXI_NAME, search(SupplierInfo.JEFF_TAXI_API, pickUpLocation, dropOffLocation, numPassengers));
+
+        List<RideOption> allRides = new ArrayList<>();
+        if (davesRides != null)
+        {
+            allRides.addAll(davesRides);
+        }
+        if (ericsRides != null)
+        {
+            allRides.addAll(ericsRides);
+        }
+        if (jeffsRides != null)
+        {
+            allRides.addAll(jeffsRides);
+        }
+
+        List<RideOption> bestRideOptions = filterCarTypeByPrice(allRides);
 
         return bestRideOptions;
+    }
+
+    /**
+     * Filters a list of ride options to pick the lowest price ride option for each car type
+     * @param rideOptions list of ride options
+     * @return list of cheapest rideOptions per car type
+     */
+    static List<RideOption> filterCarTypeByPrice(List<RideOption> rideOptions)
+    {
+        HashMap<String, RideOption> bestCarTypePrice = new HashMap<>();
+
+        for (RideOption ride : rideOptions)
+        {
+            if (bestCarTypePrice.get(ride.getCarType()) == null ||
+                (bestCarTypePrice.get(ride.getCarType()).getPrice() > ride.getPrice()))
+            {
+                bestCarTypePrice.put(ride.getCarType(), ride);
+            }
+        }
+
+        return new ArrayList<RideOption>(bestCarTypePrice.values());
     }
 
     /**
