@@ -73,6 +73,7 @@ public class SearchEngine
         }
 
         List<RideOption> bestRideOptions = ResponseProcessing.filterCarTypeByPrice(allRides);
+        Collections.sort(bestRideOptions, Collections.reverseOrder());
 
         return bestRideOptions;
     }
