@@ -2,6 +2,7 @@ package test.com.mariashipley;
 
 import main.com.mariashipley.Coordinate;
 import main.com.mariashipley.RideOption;
+import main.com.mariashipley.TaxiApiUrls;
 import org.junit.jupiter.api.Test;
 
 import java.net.MalformedURLException;
@@ -23,7 +24,7 @@ class SearchEngineTest
         Coordinate pickupLocation = new Coordinate(1.234, 5.678);
         Coordinate dropoffLocation = new Coordinate(-12.5, 13.57);
 
-        assertEquals(buildQuery("https://techtest.rideways.com/dave", pickupLocation, dropoffLocation), expectedQuery);
+        assertEquals(buildQuery(TaxiApiUrls.DAVE_TAXI_API, pickupLocation, dropoffLocation), expectedQuery);
     }
 
     @Test
