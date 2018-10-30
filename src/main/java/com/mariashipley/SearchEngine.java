@@ -10,10 +10,14 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 class SearchEngine
 {
     private static final int CONNECTION_TIMEOUT = 2000;
+
+    private static final Logger LOGGER = Logger.getLogger(SearchEngine.class.getName());
 
     /**
      * Searches for car options for the given locations and prints in descending price order.
@@ -104,7 +108,8 @@ class SearchEngine
         }
         catch (MalformedURLException e)
         {
-            System.out.println("Could not build URL for API query.");
+            LOGGER.log(Level.WARNING, "Could not build URL for API query.");
+
             return null;
         }
     }
@@ -129,11 +134,11 @@ class SearchEngine
         }
         catch (SocketTimeoutException timeoutException)
         {
-            System.out.println("Connection timed-out: Re-submit your request.");
+            LOGGER.log(Level.WARNING, "Connection timed-out: Re-submit your request.");
         }
         catch (IOException e)
         {
-            System.out.println("Encountered a problem: please try again.");
+            LOGGER.log(Level.WARNING, "Encountered a problem: please try again.");
         }
 
         return null;
