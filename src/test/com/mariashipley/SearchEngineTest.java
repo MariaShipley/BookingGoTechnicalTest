@@ -23,7 +23,7 @@ class SearchEngineTest
         Coordinate pickupLocation = new Coordinate(1.234, 5.678);
         Coordinate dropoffLocation = new Coordinate(-12.5, 13.57);
 
-        assertEquals(buildQuery(pickupLocation, dropoffLocation), expectedQuery);
+        assertEquals(buildQuery("https://techtest.rideways.com/dave", pickupLocation, dropoffLocation), expectedQuery);
     }
 
     @Test
