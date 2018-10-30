@@ -62,7 +62,7 @@ public class SearchEngine
     }
 
     /**
-     * Searches for car options for the given locations and prints in descending price order.
+     * Searches all suppliers for car options for the given locations
      * @param pickUpLocation Coordinates of the pick-up location
      * @param dropOffLocation Coordinates of the drop-off location
      * @param numPassengers Number of passengers
