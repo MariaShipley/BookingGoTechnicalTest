@@ -1,4 +1,4 @@
-package com.mariashipley;
+package com.mariashipley.Models;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -7,10 +7,10 @@ public class RideOption implements Comparable<RideOption>
     @SerializedName("car_type")
     private String carType;
 
+    private String supplier;
+
     @SerializedName("price")
     private int price;
-
-    private String supplier;
 
     /**
      * Constructs a RideOption object that comprises of a car type, its price and a supplier
@@ -41,7 +41,7 @@ public class RideOption implements Comparable<RideOption>
     {
         if (supplier == null || supplier.isEmpty())
         {
-            return getBasicInfoString();
+            return basicInfoString();
         }
         else
         {
@@ -76,7 +76,7 @@ public class RideOption implements Comparable<RideOption>
         this.supplier = supplier;
     }
 
-    public String getBasicInfoString()
+    public String basicInfoString()
     {
         return carType + " - " + price;
     }

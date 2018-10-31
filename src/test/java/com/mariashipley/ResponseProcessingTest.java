@@ -1,5 +1,6 @@
 package com.mariashipley;
 
+import com.mariashipley.Models.RideOption;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

@@ -1,5 +1,8 @@
 package com.mariashipley;
 
+import com.mariashipley.Models.ApiResponse;
+import com.mariashipley.Models.RideOption;
+
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 

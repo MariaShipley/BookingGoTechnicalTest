@@ -1,6 +1,6 @@
 package com.mariashipley;
 
-class InputValidationUtils
+public class InputValidationUtils
 {
     /**
      * Checks if a given string can be converted to a double.
@@ -48,13 +48,12 @@ class InputValidationUtils
         return args.length == 4 || args.length == 5;
     }
 
-    // does this method need unit tests?
     /**
      * Checks if the commandline arguments are valid for this application
      * @param args The array of commandline arguments
      * @return true if the arguments are valid, otherwise false.
      */
-    static boolean isInputValid(String args[])
+    public static boolean isInputValid(String args[])
     {
         if (!isAcceptableNumberOfArguments(args))
         {
@@ -80,7 +79,7 @@ class InputValidationUtils
     /**
      * Prints a help message to the commandline
      */
-    static void printExceptionMessage()
+    public static void printExceptionMessage()
     {
         System.out.println("The arguments entered were invalid.");
         System.out.println("Provide arguments in the format:");

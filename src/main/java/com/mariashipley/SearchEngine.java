@@ -1,5 +1,9 @@
 package com.mariashipley;
 
+import com.mariashipley.Models.ApiResponse;
+import com.mariashipley.Models.Coordinate;
+import com.mariashipley.Models.RideOption;
+
 import javax.net.ssl.HttpsURLConnection;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
@@ -13,7 +17,7 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-class SearchEngine
+public class SearchEngine
 {
     private static final int CONNECTION_TIMEOUT = 2000;
 
@@ -27,7 +31,7 @@ class SearchEngine
      * @param numPassengers Number of passengers
      * @return list of possible ride options for the given number of passengers
      */
-    static List<RideOption> search(String supplierApi, Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
+    public static List<RideOption> search(String supplierApi, Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
     {
         URL url = buildQuery(supplierApi, pickUpLocation, dropOffLocation);
         if (url == null)
@@ -42,9 +46,9 @@ class SearchEngine
             return null;
         }
 
-        List<RideOption> rideOptions = apiResponse.rideOptions;
+        List<RideOption> rideOptions = apiResponse.getRideOptions();
         List<RideOption> acceptableRideOptions = ResponseProcessing.filterRidesByCapacity(rideOptions, numPassengers);
-        ResponseProcessing.setSupplierOnList(apiResponse.supplierId, acceptableRideOptions);
+        ResponseProcessing.setSupplierOnList(apiResponse.getSupplierId(), acceptableRideOptions);
         Collections.sort(acceptableRideOptions, Collections.reverseOrder());
 
         return acceptableRideOptions;
@@ -57,7 +61,7 @@ class SearchEngine
      * @param numPassengers Number of passengers
      * @return list of best possible ride options from all suppliers for the given number of passengers
      */
-    static List<RideOption> searchAll(Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
+    public static List<RideOption> searchAll(Coordinate pickUpLocation, Coordinate dropOffLocation, int numPassengers)
     {
         List<RideOption> davesRides = search(SupplierInfo.DAVE_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
         List<RideOption> ericsRides = search(SupplierInfo.ERIC_TAXI_API, pickUpLocation, dropOffLocation, numPassengers);
@@ -168,7 +172,7 @@ class SearchEngine
                 }
                 else
                 {
-                    System.out.println(option.getBasicInfoString());
+                    System.out.println(option.basicInfoString());
                 }
             }
         }

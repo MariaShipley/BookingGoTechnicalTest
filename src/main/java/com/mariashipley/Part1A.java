@@ -1,5 +1,8 @@
 package com.mariashipley;
 
+import com.mariashipley.Models.Coordinate;
+import com.mariashipley.Models.RideOption;
+
 import java.util.List;
 
 public class Part1A

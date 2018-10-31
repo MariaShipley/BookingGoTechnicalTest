@@ -1,6 +1,6 @@
-package com.mariashipley;
+package com.mariashipley.Models;
 
-class Coordinate
+public class Coordinate
 {
     private double latitude;
     private double longitude;
@@ -10,7 +10,7 @@ class Coordinate
      * @param latitude latitude of coordinate
      * @param longitude longitude of coordinate
      */
-    Coordinate(double latitude, double longitude)
+    public Coordinate(double latitude, double longitude)
     {
         this.latitude = latitude;
         this.longitude = longitude;
@@ -20,7 +20,7 @@ class Coordinate
      * Gets the latitude of Coordinate object
      * @return latitude of coordinate
      */
-    double getLatitude()
+    public double getLatitude()
     {
         return latitude;
     }
@@ -29,7 +29,7 @@ class Coordinate
      * Gets the longitude of Coordinate object
      * @return longitude of coordinate
      */
-    double getLongitude()
+    public double getLongitude()
     {
         return longitude;
     }

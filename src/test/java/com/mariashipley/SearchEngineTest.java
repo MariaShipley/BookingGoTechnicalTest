@@ -1,7 +1,6 @@
 package com.mariashipley;
 
-import com.mariashipley.Coordinate;
-import com.mariashipley.SupplierInfo;
+import com.mariashipley.Models.Coordinate;
 import org.junit.jupiter.api.Test;
 
 import java.net.MalformedURLException;
