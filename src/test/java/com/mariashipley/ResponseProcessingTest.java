@@ -1,18 +1,18 @@
 package com.mariashipley;
 
 import com.mariashipley.Models.RideOption;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-class ResponseProcessingTest
+public class ResponseProcessingTest
 {
     @Test
-    void filterRidesByCapacity_ListOfRideOptions_ReturnsArrayOfAcceptableRides()
+    public void filterRidesByCapacity_ListOfRideOptions_ReturnsArrayOfAcceptableRides()
     {
         int numPassengers = 6;
         RideOption r1 = new RideOption("STANDARD", 1234); // 4 passengers
@@ -28,7 +28,7 @@ class ResponseProcessingTest
     }
 
     @Test
-    void filterCarTypeByPrice_ListOfRideOptions_ReturnsCheapestOfEachCarType()
+    public void filterCarTypeByPrice_ListOfRideOptions_ReturnsCheapestOfEachCarType()
     {
         RideOption r1 = new RideOption("MINIBUS", 5678, "DAVE");
         RideOption r2 = new RideOption("MINIBUS", 5677, "JEFF");
@@ -42,7 +42,7 @@ class ResponseProcessingTest
     }
 
     @Test
-    void filterCarTypeByPrice_ListOfRideOptions_ReturnsCorrectLengthList()
+    public void filterCarTypeByPrice_ListOfRideOptions_ReturnsCorrectLengthList()
     {
         RideOption r1 = new RideOption("STANDARD", 1000, "DAVE");
         RideOption r2 = new RideOption("MINIBUS", 5678, "DAVE");

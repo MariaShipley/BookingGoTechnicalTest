@@ -1,16 +1,16 @@
 package com.mariashipley;
 
 import com.mariashipley.Models.RideOption;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-class RideOptionTest
+public class RideOptionTest
 {
     private RideOption rideOption = new RideOption("STANDARD", 300);
 
     @Test
-    void toString_RideOption_ConvertsRideOptionToCorrectFormat()
+    public void toString_RideOption_ConvertsRideOptionToCorrectFormat()
     {
         String expectedString = "STANDARD - 300";
 
@@ -18,21 +18,21 @@ class RideOptionTest
     }
 
     @Test
-    void compareTo_FirstRideOptionIsMoreExpensive_Positive()
+    public void compareTo_FirstRideOptionIsMoreExpensive_Positive()
     {
         int result = rideOption.compareTo(new RideOption("STANDARD", 299));
         assertEquals(1, result);
     }
 
     @Test
-    void compareTo_FirstRideOptionIsCheaper_Negative()
+    public void compareTo_FirstRideOptionIsCheaper_Negative()
     {
         int result = rideOption.compareTo(new RideOption("STANDARD", 301));
         assertEquals(-1, result);
     }
 
     @Test
-    void compareTo_BothRideOptionsCostTheSame_Zero()
+    public void compareTo_BothRideOptionsCostTheSame_Zero()
     {
         int result = rideOption.compareTo(new RideOption("STANDARD", 300));
         assertEquals(0, result);

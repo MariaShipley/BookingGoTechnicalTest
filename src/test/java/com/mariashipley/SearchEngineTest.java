@@ -1,18 +1,18 @@
 package com.mariashipley;
 
 import com.mariashipley.Models.Coordinate;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
 
 import static com.mariashipley.SearchEngine.buildQuery;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 
-class SearchEngineTest
+public class SearchEngineTest
 {
     @Test
-    void buildQuery_Coordinates_ReturnsCorrectQuery() throws MalformedURLException
+    public void buildQuery_Coordinates_ReturnsCorrectQuery() throws MalformedURLException
     {
         URL expectedQuery = new URL("https://techtest.rideways.com/dave?pickup=1.234,5.678&dropoff=-12.5,13.57");
 
