@@ -1,13 +1,11 @@
 package com.mariashipley.Controllers;
 
+import com.google.gson.Gson;
 import com.mariashipley.InputValidationUtils;
-import com.mariashipley.SearchEngine;
 import com.mariashipley.Models.ApiInputException;
 import com.mariashipley.Models.Coordinate;
 import com.mariashipley.Models.RideOption;
-
-import com.google.gson.Gson;
-
+import com.mariashipley.SearchEngine;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -22,6 +20,13 @@ import java.util.List;
 @RestController
 public class ApiController
 {
+    /**
+     * Searches for car options for the given locations and prints in descending price order.
+     * @param pickUp Coordinates of the pick-up location as a string
+     * @param dropOff Coordinates of the drop-off location as a string
+     * @param passengers Number of passengers
+     * @return JSON giving either the list of possible ride options for the given number of passengers or an error message
+     */
     @RequestMapping(value = "/RidewaysTaxiApp", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> getRideOptions(@RequestParam(value="pickup") String pickUp,
                                          @RequestParam(value="dropoff", defaultValue = "") String dropOff,
@@ -63,6 +68,7 @@ public class ApiController
         List<RideOption> rideOptions = SearchEngine.searchAll(pickUpLocation, dropOffLocation, numPassengers);
 
         Gson gson = new Gson();
+
         return new ResponseEntity<String>(gson.toJson(rideOptions), new HttpHeaders(), HttpStatus.OK);
     }
 }

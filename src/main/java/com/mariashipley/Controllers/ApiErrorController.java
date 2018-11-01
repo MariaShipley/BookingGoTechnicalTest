@@ -1,7 +1,6 @@
 package com.mariashipley.Controllers;
 
 import com.mariashipley.Models.ErrorJson;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.servlet.error.ErrorAttributes;
 import org.springframework.boot.web.servlet.error.ErrorController;
@@ -23,7 +22,7 @@ public class ApiErrorController implements ErrorController
     private ErrorAttributes errorAttributes;
 
     @RequestMapping(value = PATH, produces = MediaType.APPLICATION_JSON_VALUE)
-    ResponseEntity<ErrorJson> error(WebRequest request, HttpServletResponse response)
+    public ResponseEntity<ErrorJson> error(WebRequest request, HttpServletResponse response)
     {
         return ResponseEntity.status(response.getStatus())
                 .body(new ErrorJson(response.getStatus(), getErrorAttributes(request)));

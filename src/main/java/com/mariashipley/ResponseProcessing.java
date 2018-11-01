@@ -1,10 +1,9 @@
 package com.mariashipley;
 
-import com.mariashipley.Models.ApiResponse;
-import com.mariashipley.Models.RideOption;
-
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.mariashipley.Models.ApiResponse;
+import com.mariashipley.Models.RideOption;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,7 +15,7 @@ import java.util.List;
 
 class ResponseProcessing
 {
-    private static final HashMap<String, Integer> carCapacity = new HashMap<>() {{
+    private static final HashMap<String, Integer> carCapacity = new HashMap<String, Integer>() {{
         put("STANDARD", 4);
         put("EXECUTIVE", 4);
         put("LUXURY", 4);
