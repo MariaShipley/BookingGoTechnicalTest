@@ -90,3 +90,5 @@ Spring Boot framework was used for the REST API, as well as for assembling the P
 Gson was used for serialization and deserialization of JSONs.
 
 JUnit was used for the unit tests
+
+Any Server errors/exceptions are logged at WARNING level - these are not currently handled by the program. This was preferred to printing to the console, since this specific error info should be invisible to the user.
