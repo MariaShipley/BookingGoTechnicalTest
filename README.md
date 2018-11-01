@@ -11,6 +11,11 @@ Command to build project:
 'mvn clean package compile assembly:single'
 ```
 
+Command to run tests (after building project):
+```
+'mvn test'
+```
+
 ## Part 1
 
 ### Part 1A: Console application to print the search results for Dave's Taxis
