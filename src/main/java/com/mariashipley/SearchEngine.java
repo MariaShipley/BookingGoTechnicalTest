@@ -5,12 +5,10 @@ import com.mariashipley.Models.Coordinate;
 import com.mariashipley.Models.RideOption;
 
 import javax.net.ssl.HttpsURLConnection;
+import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.SocketTimeoutException;
 import java.net.URL;
-
-import java.io.IOException;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -152,7 +150,7 @@ public class SearchEngine
      * Prints ride options to the commandline
      * @param rideOptions list of ride options available
      */
-    static void printRideOptions(List<RideOption> rideOptions, boolean printSupplier)
+    public static void printRideOptions(List<RideOption> rideOptions, boolean printSupplier)
     {
         if (rideOptions == null)
         {
