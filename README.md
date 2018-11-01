@@ -76,3 +76,12 @@ e.g.
 'http://localhost:8080/RidewaysTaxiApp?pickup=1.2,3.4&dropoff=5.6,7.8&passengers=6'
 ```
 
+## Additional Information
+
+Maven was used to compile and build the project, and for assembling one of the jars, so that does not rely on Spring Boot.
+
+Spring Boot framework was used for the REST API, as well as for assembling the Part2 jar.
+
+Gson was used for serialization and deserialization of JSONs.
+
+JUnit was used for the unit tests
