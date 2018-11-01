@@ -8,12 +8,12 @@ Maven 3.6 (may work with earlier versions)
 ## Setup
 Command to build project:
 ```
-'mvn clean package compile assembly:single'
+mvn clean package compile assembly:single
 ```
 
 Command to run tests (after building project):
 ```
-'mvn test'
+mvn test
 ```
 
 ## Part 1
@@ -22,38 +22,38 @@ Command to run tests (after building project):
 
 #### Windows:
 ```
-'java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A [pickup latitude] [pickup longitude] [dropoff latitude] [dropoff longitude] [no. passengers (optional)]'
+java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A [pickup latitude] [pickup longitude] [dropoff latitude] [dropoff longitude] [no. passengers (optional)]
 ```
 e.g.
 ```
-'java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A 1.234 5.678 -10 2.111'
+java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A 1.234 5.678 -10 2.111
 ```
 #### Unix:
 ```
-'java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A [pickup latitude] [pickup longitude] [dropoff latitude] [dropoff longitude] [no. passengers (optional)]'
+java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A [pickup latitude] [pickup longitude] [dropoff latitude] [dropoff longitude] [no. passengers (optional)]
 ```
 e.g.
 ```
-'java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A 1.234 5.678 -10 2.111'
+java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A 1.234 5.678 -10 2.111
 ```
 
 ### Part 1B: Console application to print the search results for all taxi APIs
 
 #### Windows:
 ```
-'java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B [pickup latitude] [pickup longitude] [dropoff latitude] [dropoff longitude] [no. passengers (optional)]'
+java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B [pickup latitude] [pickup longitude] [dropoff latitude] [dropoff longitude] [no. passengers (optional)]
 ```
 e.g.
 ```
-'java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B 1.234 5.678 -10 2.111 5'
+java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B 1.234 5.678 -10 2.111 5
 ```
 #### Unix:
 ```
-'java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B [pickup latitude] [pickup longitude] [dropoff latitude] [dropoff longitude] [no. passengers (optional)]'
+java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B [pickup latitude] [pickup longitude] [dropoff latitude] [dropoff longitude] [no. passengers (optional)]
 ```
 e.g.
 ```
-'java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B 1.234 5.678 -10 2.111 5'
+java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B 1.234 5.678 -10 2.111 5
 ```
 
 ## Part 2: REST API
@@ -62,28 +62,25 @@ Command to start the server:
 
 #### Windows:
 ```
-'java -jar target\RidewaysTaxiApp-1.0-SNAPSHOT.jar'
+java -jar target\RidewaysTaxiApp-1.0-SNAPSHOT.jar
 ```
 #### Unix:
 ```
-'java -jar target/RidewaysTaxiApp-1.0-SNAPSHOT.jar'
+java -jar target/RidewaysTaxiApp-1.0-SNAPSHOT.jar
 ```
 
 #### Query format:
 
 ```
-'http://localhost:8080/RidewaysTaxiApp?pickup=[pickupLatitude],[pickupLongitude]&dropoff=[dropoffLatitude],[dropoffLongitude]&passengers=[passengers]'
+http://localhost:8080/RidewaysTaxiApp?pickup=[pickupLatitude],[pickupLongitude]&dropoff=[dropoffLatitude],[dropoffLongitude]&passengers=[passengers]
 ```
 where passengers is an optional argument
 
-e.g.
-```
-'http://localhost:8080/RidewaysTaxiApp?pickup=1.2,3.4&dropoff=5.6,7.8&passengers=6'
-```
+e.g. [http://localhost:8080/RidewaysTaxiApp?pickup=1.2,3.4&dropoff=5.6,7.8&passengers=6](http://localhost:8080/RidewaysTaxiApp?pickup=1.2,3.4&dropoff=5.6,7.8&passengers=6)
 
 ## Additional Information
 
-Maven was used to compile and build the project, and for assembling one of the jars, so that does not rely on Spring Boot.
+Maven was used to compile and build the project, and for assembling the part 1 jar file that does not rely on Spring Boot.
 
 Spring Boot framework was used for the REST API, as well as for assembling the Part2 jar.
 
