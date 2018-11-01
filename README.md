@@ -21,7 +21,7 @@ Command to build project:
 ```
 e.g.
 ```
-'java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A 1.234 5.678 -1000 2.1111'
+'java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A 1.234 5.678 -10 2.111'
 ```
 #### Unix:
 ```
@@ -29,7 +29,7 @@ e.g.
 ```
 e.g.
 ```
-'java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A 1.234 5.678 -1000 2.1111'
+'java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1A 1.234 5.678 -10 2.111'
 ```
 
 ### Part 1B: Console application to print the search results for all taxi APIs
@@ -40,7 +40,7 @@ e.g.
 ```
 e.g.
 ```
-'java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B 1.234 5.678 -1000 2.1111 5'
+'java -cp target\RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B 1.234 5.678 -10 2.111 5'
 ```
 #### Unix:
 ```
@@ -48,7 +48,7 @@ e.g.
 ```
 e.g.
 ```
-'java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B 1.234 5.678 -1000 2.1111 5'
+'java -cp target/RidewaysTaxiApp-1.0-SNAPSHOT-jar-with-dependencies.jar com.mariashipley.Part1B 1.234 5.678 -10 2.111 5'
 ```
 
 ## Part 2: REST API
